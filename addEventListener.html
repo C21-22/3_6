@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Listeners Example</title>
+</head>
+<body>
+
+<button id="myButton">Натисни мене</button>
+
+<script>
+    var myButton = document.getElementById("myButton");
+    var firstClick = true;
+
+    myButton.addEventListener("click", function() {
+        if (firstClick) {
+            console.log("Подія виникла!");
+            firstClick = false;
+        } else {
+            console.log("Ще один обробник події!");
+        }
+    });
+</script>
+
+</body>
+</html>
